@@ -1,0 +1,409 @@
+/* ==========================================
+   1. ESTILOS GENERALES Y RESETEO
+   ========================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+/* ==========================================
+   2. NAVEGACIÓN SUPERIOR (Común en todas)
+   ========================================== */
+header {
+    background-color: #ffffff;
+    border-bottom: 1px solid #e0e0e0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 20px;
+}
+
+.logo-area {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: #1a1a1a;
+    text-decoration: none;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    background-color: #f0f2f5;
+    border-radius: 20px;
+    padding: 8px 15px;
+    width: 350px;
+}
+
+.search-bar input {
+    border: none;
+    background: transparent;
+    outline: none;
+    width: 100%;
+    margin-left: 8px;
+    font-size: 0.9rem;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #555;
+    font-size: 0.95rem;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    transition: color 0.2s;
+}
+
+.nav-links a:hover, .nav-links a.active {
+    color: #0046be;
+    font-weight: bold;
+}
+
+/* Contenedor principal de las vistas */
+main {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 0 20px;
+}
+
+/* ==========================================
+   3. VISTA INICIO (INDEX)
+   ========================================== */
+.hero-banner {
+    background: linear-gradient(90deg, #102a43 0%, #243b53 100%);
+    color: white;
+    border-radius: 12px;
+    padding: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.hero-text h1 {
+    font-size: 2.2rem;
+    margin-bottom: 10px;
+}
+
+.hero-text p {
+    font-size: 1rem;
+    color: #b0c4de;
+    margin-bottom: 20px;
+}
+
+.btn-primary {
+    background-color: #0056b3;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.btn-primary:hover {
+    background-color: #003d82;
+}
+
+section {
+    margin-bottom: 40px;
+}
+
+section h2 {
+    font-size: 1.4rem;
+    margin-bottom: 20px;
+    color: #1a1a1a;
+}
+
+.categories-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+    gap: 15px;
+}
+
+.category-card {
+    background: white;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    text-decoration: none;
+    color: #333;
+    transition: transform 0.2s;
+}
+
+.category-card:hover {
+    transform: translateY(-3px);
+}
+
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.product-card {
+    background: white;
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.product-card h3 {
+    font-size: 0.95rem;
+    font-weight: normal;
+    margin-bottom: 8px;
+}
+
+.product-card .price {
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: #111;
+}
+
+.btn-add-cart {
+    background-color: #0046be;
+    color: white;
+    border: none;
+    width: 100%;
+    padding: 8px;
+    border-radius: 4px;
+    margin-top: 10px;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.btn-add-cart:hover {
+    background-color: #003399;
+}
+
+/* ==========================================
+   4. VISTA PRODUCTOS Y FILTROS
+   ========================================== */
+.catalog-layout {
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.filters-sidebar {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    height: fit-content;
+}
+
+.filters-sidebar h3 {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+}
+
+.filter-group {
+    margin-bottom: 20px;
+}
+
+.filter-group label {
+    display: block;
+    font-size: 0.9rem;
+    margin-bottom: 8px;
+    color: #555;
+    cursor: pointer;
+}
+
+/* ==========================================
+   5. VISTA CARRITO DE COMPRAS
+   ========================================== */
+.cart-layout {
+    display: grid;
+    grid-template-columns: 1fr 350px;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.cart-items-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.cart-item {
+    background: white;
+    padding: 15px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.cart-item-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.cart-summary {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    height: fit-content;
+}
+
+.cart-summary h3 {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+}
+
+.summary-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    font-size: 0.95rem;
+    color: #555;
+}
+
+.summary-total {
+    display: flex;
+    justify-content: space-between;
+    margin: 15px 0;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #111;
+    border-top: 1px solid #eee;
+    padding-top: 10px;
+}
+
+.btn-checkout {
+    background-color: #0046be;
+    color: white;
+    border: none;
+    width: 100%;
+    padding: 12px;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+.btn-continue {
+    background-color: #f0f2f5;
+    color: #333;
+    border: 1px solid #ccc;
+    width: 100%;
+    padding: 10px;
+    border-radius: 6px;
+    font-weight: 500;
+    cursor: pointer;
+    text-align: center;
+    display: block;
+    text-decoration: none;
+}
+
+/* ==========================================
+   6. VISTA DETALLE DE PRODUCTO
+   ========================================== */
+.detail-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    background: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    margin-top: 20px;
+}
+
+.main-img-box {
+    width: 100%;
+    height: 400px;
+    background: #e2e8f0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    color: #555;
+}
+
+.product-info h1 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+.product-price {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #111;
+    margin: 15px 0;
+}
+
+.sizes-container {
+    display: flex;
+    gap: 10px;
+    margin: 15px 0;
+}
+
+.size-btn {
+    padding: 8px 15px;
+    border: 1px solid #ccc;
+    background: white;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.size-btn.active {
+    border-color: #0046be;
+    background: #0046be;
+    color: white;
+}
+
+.btn-action {
+    width: 100%;
+    padding: 12px;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.btn-cart-detail {
+    background-color: #0046be;
+    color: white;
+    border: none;
+}
+
+.btn-fav-detail {
+    background-color: white;
+    color: #0046be;
+    border: 1px solid #0046be;
+}

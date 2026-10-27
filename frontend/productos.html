@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marketplace - Productos</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <!-- Barra de Navegación Superior -->
+    <header>
+        <div class="nav-container">
+            <a href="index.html" class="logo-area">
+                <span>🛒 Marketplace</span>
+            </a>
+            <div class="search-bar">
+                <span></span>
+                <input type="text" placeholder="Buscar productos, marcas y más...">
+            </div>
+            <ul class="nav-links">
+                <li><a href="productos.html" style="color: #0046be; font-weight: bold;">Productos</a></li>
+                <li><a href="#">Categorías</a></li>
+                <li><a href="#">Filtros</a></li>
+                <li><a href="#">🤍 Favoritos</a></li>
+                <li><a href="carrito.html">🛒 Carrito</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main>
+        <h2 style="margin-bottom: 5px;">Productos</h2>
+        <p style="color: #666; font-size: 0.95rem; margin-bottom: 20px;">Descubre todos los productos disponibles en Marketplace.</p>
+
+        <div class="catalog-layout">
+            <!-- Barra lateral de Filtros (basada en tu boceto) -->
+            <aside class="filters-sidebar">
+                <h3>Filtros</h3>
+                <div class="filter-group">
+                    <strong>Categoría</strong>
+                    <label style="margin-top: 8px;"><input type="checkbox" checked> Todas las categorías</label>
+                    <label><input type="checkbox"> Ropa</label>
+                    <label><input type="checkbox"> Tecnología</label>
+                    <label><input type="checkbox"> Audio</label>
+                    <label><input type="checkbox"> Accesorios</label>
+                    <label><input type="checkbox"> Hogar</label>
+                </div>
+                <div class="filter-group">
+                    <strong>Precio</strong>
+                    <input type="range" min="0" max="5000" style="width: 100%; margin-top: 8px;">
+                </div>
+            </aside>
+
+            <!-- Cuadrícula de productos del catálogo -->
+            <div class="products-grid">
+                <div class="product-card">
+                    <div style="width: 100%; height: 140px; background: #e2e8f0; display: flex; align-items: center; justify-content: center; margin-bottom: 10px;">[Top de ropa]</div>
+                    <h3>Top de ropa</h3>
+                    <div class="price" style="margin-bottom: 10px;">$549</div>
+                    <button class="btn-add-cart">Agregar al carrito</button>
+                </div>
+                <div class="product-card">
+                    <div style="width: 100%; height: 140px; background: #e2e8f0; display: flex; align-items: center; justify-content: center; margin-bottom: 10px;">[New Balance 327]</div>
+                    <h3>New Balance 327</h3>
+                    <div class="price" style="margin-bottom: 10px;">$2,199</div>
+                    <button class="btn-add-cart">Agregar al carrito</button>
+                </div>
+                <div class="product-card">
+                    <div style="width: 100%; height: 140px; background: #e2e8f0; display: flex; align-items: center; justify-content: center; margin-bottom: 10px;">[Bolsa de hombro]</div>
+                    <h3>Bolsa de hombro</h3>
+                    <div class="price" style="margin-bottom: 10px;">$1,799</div>
+                    <button class="btn-add-cart">Agregar al carrito</button>
+                </div>
+                <div class="product-card">
+                    <div style="width: 100%; height: 140px; background: #e2e8f0; display: flex; align-items: center; justify-content: center; margin-bottom: 10px;">[Audífonos Sony]</div>
+                    <h3>Audífonos Sony</h3>
+                    <div class="price" style="margin-bottom: 10px;">$2,499</div>
+                    <button class="btn-add-cart">Agregar al carrito</button>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

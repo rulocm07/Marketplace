@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marketplace - Carrito de compras</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <!-- Barra de Navegación Superior -->
+    <header>
+        <div class="nav-container">
+            <a href="index.html" class="logo-area">
+                <span>🛒 Marketplace</span>
+            </a>
+            <div class="search-bar">
+                <span>🔍</span>
+                <input type="text" placeholder="Buscar productos, marcas y más...">
+            </div>
+            <ul class="nav-links">
+                <li><a href="productos.html">📦 Productos</a></li>
+                <li><a href="#">📁 Categorías</a></li>
+                <li><a href="#">🏷️ Filtros</a></li>
+                <li><a href="#">🤍 Favoritos</a></li>
+                <li><a href="carrito.html" style="color: #0046be; font-weight: bold;">🛒 Carrito (2)</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main>
+        <h2 style="margin-bottom: 5px;">Carrito de compras</h2>
+        <p style="color: #666; font-size: 0.95rem; margin-bottom: 20px;">Revisa tus productos, cantidades y continúa con tu compra.</p>
+
+        <div class="cart-layout">
+            <!-- Lista de productos en el carrito -->
+            <div class="cart-items-list">
+                <div class="cart-item">
+                    <div class="cart-item-info">
+                        <div style="width: 80px; height: 80px; background: #e2e8f0; display: flex; align-items: center; justify-content: center; font-size: 0.8rem;">[Bolso]</div>
+                        <div>
+                            <h4 style="font-size: 0.95rem;">Bolsa de hombro beige</h4>
+                            <p style="color: #666; font-size: 0.85rem;">Color: Beige</p>
+                            <p style="font-weight: bold; margin-top: 5px;">$1,299</p>
+                        </div>
+                    </div>
+                    <div>
+                        <span style="cursor: pointer; color: #999;">🗑️ Eliminar</span>
+                    </div>
+                </div>
+
+                <div class="cart-item">
+                    <div class="cart-item-info">
+                        <div style="width: 80px; height: 80px; background: #e2e8f0; display: flex; align-items: center; justify-content: center; font-size: 0.8rem;">[Tenis]</div>
+                        <div>
+                            <h4 style="font-size: 0.95rem;">New Balance 327</h4>
+                            <p style="color: #666; font-size: 0.85rem;">Talla: 24 | Color: Beige</p>
+                            <p style="font-weight: bold; margin-top: 5px;">$2,199</p>
+                        </div>
+                    </div>
+                    <div>
+                        <span style="cursor: pointer; color: #999;">🗑️ Eliminar</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Resumen de compra -->
+            <div class="cart-summary">
+                <h3>Resumen de compra</h3>
+                <div class="summary-row">
+                    <span>Subtotal (2 productos)</span>
+                    <span>$3,498</span>
+                </div>
+                <div class="summary-row">
+                    <span>Envío</span>
+                    <span style="color: green; font-weight: bold;">Gratis</span>
+                </div>
+                <div class="summary-total">
+                    <span>Total</span>
+                    <span>$3,498</span>
+                </div>
+                <button class="btn-checkout">Proceder al pago</button>
+                <a href="productos.html" class="btn-continue">Seguir comprando</a>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
