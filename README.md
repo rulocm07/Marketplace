@@ -49,7 +49,7 @@ Si dejas la ruta vacía o no existe el archivo, aparecerá un marcador neutro (`
 ## 3. Archivos del proyecto
 
 ```text
-Marketplace_corregido/
+Marketplace-main/
 ├── README.md                         Guía técnica del proyecto
 ├── frontend/
 │   ├── index.html                    Página principal
@@ -72,7 +72,6 @@ Marketplace_corregido/
 │       ├── imagen-no-disponible.svg  Imagen de respaldo
 │       └── productos/                Los 12 JPG reemplazables
 ├── backend/                          Carpeta reservada
-└── respaldo_original/                Archivos originales sin modificar
 ```
 
 ## 4. Funcionalidades disponibles
