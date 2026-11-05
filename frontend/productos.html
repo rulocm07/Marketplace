@@ -3,82 +3,59 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Marketplace - Productos</title>
+    <meta name="description" content="Explora nuestro catálogo y filtra productos por categoría y precio.">
+    <title>Productos - Marketplace</title>
     <link rel="stylesheet" href="css/styles.css">
+    <script src="js/main.js" defer></script>
+    <script src="js/productos.js" defer></script>
 </head>
-<body>
+<body data-page="products">
+    <div id="site-header"></div>
 
-    <!-- Barra de Navegación Superior -->
-    <header>
-        <div class="nav-container">
-            <a href="index.html" class="logo-area">
-                <span>🛒 Marketplace</span>
-            </a>
-            <div class="search-bar">
-                <span></span>
-                <input type="text" placeholder="Buscar productos, marcas y más...">
+    <main class="container">
+        <div class="page-heading">
+            <div>
+                <h1>Productos</h1>
+                <p class="muted">Encuentra lo que necesitas y filtra por categoría o precio.</p>
             </div>
-            <ul class="nav-links">
-                <li><a href="productos.html" style="color: #0046be; font-weight: bold;">Productos</a></li>
-                <li><a href="#">Categorías</a></li>
-                <li><a href="#">Filtros</a></li>
-                <li><a href="#">🤍 Favoritos</a></li>
-                <li><a href="carrito.html">🛒 Carrito</a></li>
-            </ul>
         </div>
-    </header>
-
-    <main>
-        <h2 style="margin-bottom: 5px;">Productos</h2>
-        <p style="color: #666; font-size: 0.95rem; margin-bottom: 20px;">Descubre todos los productos disponibles en Marketplace.</p>
 
         <div class="catalog-layout">
-            <!-- Barra lateral de Filtros (basada en tu boceto) -->
-            <aside class="filters-sidebar">
-                <h3>Filtros</h3>
+            <aside class="filters-sidebar" id="filtros" aria-label="Filtrar productos">
+                <h3 id="categorias">Filtros</h3>
                 <div class="filter-group">
-                    <strong>Categoría</strong>
-                    <label style="margin-top: 8px;"><input type="checkbox" checked> Todas las categorías</label>
-                    <label><input type="checkbox"> Ropa</label>
-                    <label><input type="checkbox"> Tecnología</label>
-                    <label><input type="checkbox"> Audio</label>
-                    <label><input type="checkbox"> Accesorios</label>
-                    <label><input type="checkbox"> Hogar</label>
+                    <strong>Categorías</strong>
+                    <div id="category-filter"></div>
                 </div>
                 <div class="filter-group">
-                    <strong>Precio</strong>
-                    <input type="range" min="0" max="5000" style="width: 100%; margin-top: 8px;">
+                    <label for="price-filter"><strong>Precio máximo</strong></label>
+                    <input type="range" id="price-filter" min="0" max="20000" step="100" value="20000">
+                    <div class="small muted" id="price-label"></div>
                 </div>
+                <button class="btn-ghost full" type="button" id="clear-filters">Limpiar filtros</button>
             </aside>
 
-            <!-- Cuadrícula de productos del catálogo -->
-            <div class="products-grid">
-                <div class="product-card">
-                    <div style="width: 100%; height: 140px; background: #e2e8f0; display: flex; align-items: center; justify-content: center; margin-bottom: 10px;">[Top de ropa]</div>
-                    <h3>Top de ropa</h3>
-                    <div class="price" style="margin-bottom: 10px;">$549</div>
-                    <button class="btn-add-cart">Agregar al carrito</button>
+            <section aria-label="Listado de productos">
+                <div class="catalog-top">
+                    <span class="muted" id="result-count"></span>
+                    <label class="small" for="sort-filter">
+                        Ordenar por
+                        <select id="sort-filter" class="sort-select">
+                            <option value="default">Relevancia</option>
+                            <option value="min">Menor precio</option>
+                            <option value="max">Mayor precio</option>
+                        </select>
+                    </label>
                 </div>
-                <div class="product-card">
-                    <div style="width: 100%; height: 140px; background: #e2e8f0; display: flex; align-items: center; justify-content: center; margin-bottom: 10px;">[New Balance 327]</div>
-                    <h3>New Balance 327</h3>
-                    <div class="price" style="margin-bottom: 10px;">$2,199</div>
-                    <button class="btn-add-cart">Agregar al carrito</button>
+                <div class="field catalog-search-field">
+                    <label for="catalog-search">Buscar en el catálogo</label>
+                    <input id="catalog-search" type="search" placeholder="Nombre o categoría del producto">
                 </div>
-                <div class="product-card">
-                    <div style="width: 100%; height: 140px; background: #e2e8f0; display: flex; align-items: center; justify-content: center; margin-bottom: 10px;">[Bolsa de hombro]</div>
-                    <h3>Bolsa de hombro</h3>
-                    <div class="price" style="margin-bottom: 10px;">$1,799</div>
-                    <button class="btn-add-cart">Agregar al carrito</button>
-                </div>
-                <div class="product-card">
-                    <div style="width: 100%; height: 140px; background: #e2e8f0; display: flex; align-items: center; justify-content: center; margin-bottom: 10px;">[Audífonos Sony]</div>
-                    <h3>Audífonos Sony</h3>
-                    <div class="price" style="margin-bottom: 10px;">$2,499</div>
-                    <button class="btn-add-cart">Agregar al carrito</button>
-                </div>
-            </div>
+                <div class="products-grid" id="catalog-results"></div>
+            </section>
         </div>
     </main>
+
+    <div id="site-footer"></div>
 </body>
 </html>
