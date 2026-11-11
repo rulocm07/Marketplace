@@ -109,25 +109,3 @@ Marketplace/
 ### Cómo limpiar el almacenamiento de prueba
 
 Desde DevTools del navegador → *Application* → *Local Storage*, puedes eliminar las claves que empiezan por `marketplace_demo_` para reiniciar sesión, carrito y preferencias. Se conservaron estos nombres de claves respecto de la versión anterior para no borrar automáticamente los datos que ya tenías.
-
-## 6. Cambios de diseño solicitados
-
-1. Eliminado el botón **Menú** en escritorio; se conserva en móvil.
-2. Eliminado el enlace **Filtros** del encabezado (siguen los filtros internos útiles del catálogo).
-3. Banner con **fondo azul** y una fotografía sustituible.
-4. Eliminado el ícono decorativo a la izquierda de **Marketplace**.
-5. Categorías destacadas como botones compactos de texto, sin emojis.
-6. Fotografías locales en las tarjetas de productos, detalle y carrito.
-7. Rutas de imágenes preparadas para cambiar los JPG sin modificar el código.
-8. Retirados los avisos de demostración, producto de muestra, compra no real y notas de backend de las páginas.
-9. Quitados los emojis en la tabla de administración y en **Gestionar productos**.
-10. Archivos HTML, CSS y JavaScript reordenados, indentados y comentados.
-11. Creada la página `frontend/preguntas.html` con 11 preguntas desplegables, agrupadas por tema y accesibles desde el menú superior.
-
-## 7. Limpieza de la entrega
-
-Se omitió la carpeta `backend/` porque solo tenía el archivo vacío `.gitkeep` y no ejecutaba ningún servicio. También se omitió `Marketplace-GitHub/` porque era una segunda copia con metadatos Git, no necesaria para ejecutar el sitio. Esto **no elimina ni modifica el repositorio remoto de GitHub**. Para continuar subiendo cambios, utiliza tu carpeta local que conserva `.git`, o copia estos archivos a tu repositorio clonado antes de hacer `git add`, `commit` y `push`.
-
-## 8. Posible evolución futura
-
-Crear API y base de datos para cuentas, roles, catálogo, pedidos y almacenamiento de archivos. Conectar el frontend con `fetch`, validar datos y permisos desde el servidor, guardar las contraseñas mediante un mecanismo de autenticación seguro y añadir un servicio de pago solo si el proyecto lo requiere.
