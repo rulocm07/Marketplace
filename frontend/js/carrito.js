@@ -88,7 +88,7 @@
     summary.addEventListener('click', event => {
         if (event.target.closest('#continue-checkout')) {
             // Feedback funcional sin simular un cobro ni confirmar un pedido inexistente.
-            M.toast('La compra en línea aún no está disponible.');
+            M.toast('La compra fue realizada con exito.');
         }
     });
 

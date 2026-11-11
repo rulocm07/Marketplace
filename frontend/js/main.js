@@ -214,6 +214,7 @@
                     <ul class="nav-links" id="nav-links">
                         <li><a class="${page === 'products' ? 'active' : ''}" href="productos.html">Productos</a></li>
                         <li><a href="productos.html#categorias">Categorías</a></li>
+                        <li><a class="${page === 'faq' ? 'active' : ''}" href="preguntas.html">Preguntas frecuentes</a></li>
                         <li><a class="${page === 'favorites' ? 'active' : ''}" href="favoritos.html">♡ Favoritos</a></li>
                         <li class="cart-nav">
                             <a class="${page === 'cart' ? 'active' : ''}" href="carrito.html">
